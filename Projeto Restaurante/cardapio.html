@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genki Dama Sushi</title>
+</head>
+<style>
+  .imagem-principal {
+    width: 100%;
+    height: auto;
+  }
+
+  #cabecalho {
+    background-color: rgb(228, 185, 91);
+    font-family: cursive;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  /* rgb(56, 56, 72), */
+  /* rgb(228, 185, 91), */
+
+  h1 {
+    font-style: italic;
+    font-family: Arial;
+    text-align: center;
+  }
+
+  .logo {
+    background-color: white;
+  }
+
+  .links {
+    border-color: rgb(56, 56, 72);
+    background-color: rgb(56, 56, 72);
+    margin: 0px;
+    padding: 15px;
+    color: white;
+    justify-content: space-around;
+    position: relative;
+    text-decoration: none;
+  }
+
+  .links a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #FF0000;
+    /*#de6c6e*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+
+  .links a:hover {
+    color: #FF0000;
+    /*rgb(230, 45, 45)*/
+  }
+
+  .links a:hover::after {
+    width: 100%;
+  }
+
+  .creditos {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 100%;
+    color: #999;
+  }
+
+  .cardapio {
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+  }
+
+  .cardapio h2 {
+    margin-bottom: 10px;
+  }
+
+  .cardapio .categoria {
+    margin-bottom: 10px;
+  }
+
+  .cardapio .categoria h3 {
+    margin-bottom: 5px;
+  }
+
+  .cardapio .item {
+    margin-bottom: 5px;
+  }
+
+  .cardapio .item span {
+    font-weight: bold;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #a82d2d;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .cardapio {
+    background-color: #a82d2d;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+  }
+
+  h2 {
+    color: #333;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    color: #333;
+    font-size: 18px;
+    margin-top: 0;
+  }
+
+  .item {
+    margin-bottom: 10px;
+  }
+
+  .item span {
+    font-weight: bold;
+  }
+
+  .item span,
+  .item p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .categoria {
+    margin-bottom: 20px;
+  }
+
+  .item p {
+    margin-left: 20px;
+  }
+
+  /* Estilos adicionais */
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .header h1 {
+    font-size: 36px;
+    margin: 0;
+    color: #333;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #888;
+    font-size: 14px;
+  }
+
+  h1 {
+    margin: 20px;
+    box-shadow: 0 0 25px rgb(228, 185, 91);
+  }
+
+  /* Cores personalizadas */
+
+  body {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .cardapio {
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  h2 {
+    color: #333;
+  }
+
+  h3 {
+    color: #555;
+  }
+
+  .item span {
+    color: #333;
+  }
+
+  .header h1 {
+    color: #333;
+  }
+
+  .footer {
+    color: #777;
+  }
+
+  .creditos {
+    font-size: 15px;
+    display: flex;
+    color: #999;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(56, 56, 72);
+    margin-top: 100px;
+  }
+</style>
+
+<body>
+  <header>
+    <div id="cabecalho" align="center">
+      <img src="imagens/cabecalho.png" height="120">
+    </div>
+    <div id="links" align="center">
+      <h4 class="links">
+        <span class="links">
+          <a href="index.html" class="links"> Sobre o Restaurante</a>
+          <a href="cardapio.html" class="links">Cardápio</a>
+          <a href="reservas.html" class="links">Fazer reserva</a>
+          <a href="contatos.html" class="links">Contatos</a>
+        </span>
+      </h4>
+    </div>
+  </header>
+  <main>
+    <h1>Cardápios</h1>
+    <div class="cardapio">
+      <h2>Cardápio normal</h2>
+      <div class="categoria">
+        <h3>Entradas:</h3>
+        <div class="item">
+          <span>Sopa de Missô Tradicional:</span> pasta de missô fermentado, tofu macio, cebolinha e algas
+        </div>
+        <div class="item">
+          <span>Ceviche de Saint Peter:</span> filés de Saint Peter marinados em suco cítrico, cebola roxa, coentro
+          fresco e pimenta
+        </div>
+        <div class="item">
+          <span>Carpaccio de Salmão com azeite trufado:</span> fatias de salmão fresco regadas com azeite trufado
+        </div>
+        <div class="item">
+          <span>Vinagrete de Lula:</span> lula macia, tomate, cebola e pimentões em um molho de vinagrete
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h3>Sushis:</h3>
+        <div class="item">
+          <span>Niguiri de Polvo:</span> fatias de polvo tenro, sobre arroz de sushi levemente adocicado
+        </div>
+        <div class="item">
+          <span>Uramaki de Camarão:</span> rolo de sushi invertido com camarão crocante, abacate cremoso e maionese
+          temperada, envolto em arroz e sementes de gergelim
+        </div>
+        <div class="item">
+          <span>Hot Roll Filadelfia:</span> rolo de sushi empanado e frito com recheio de salmão fresco, cream cheese
+          cremoso e cebolinha
+        </div>
+        <div class="item">
+          <span>Joe Salmão com Geleia de Maracujá:</span> combinação de salmão grelhado com geleia caseira de maracujá
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h3>Quentes:</h3>
+        <div class="item">
+          <span>Teppan de Camarão:</span> camarão grelhado na manteiga com legumes e arroz japonês
+        </div>
+        <div class="item">
+          <span>Yakissoba Frango, Camarão, Filé Mignon:</span> macarrão com legumes e proteína
+        </div>
+        <div class="item">
+          <span>Robata:</span> espetinho de salmão, peixe branco, pimentão e abacaxi
+        </div>
+        <div class="item">
+          <span>Frango Xadrez:</span> frango em cubos com pimentão, cebola em cubos ao molho de shoyu, gohan e amendoim
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h3>Sobremesas:</h3>
+        <div class="item">
+          <span>Harumaki chocolate, doce de leite:</span> sushi empanado com chocolate ou doce de leite, morango e calda
+          de sorvete
+        </div>
+        <div class="item">
+          <span>Manju:</span> bolinho recheado com feijão azuki
+        </div>
+        <div class="item">
+          <span>Bolo Matchá:</span> bolo feito com massa de matcha e recheado com doce de anko
+        </div>
+        <div class="item">
+          <span>Petit Gateau:</span> bolo de chocolate recheado acompanhado de sorvete de creme
+        </div>
+      </div>
+    </div>
+    <div class="cardapio">
+      <h2>Cardápio vegano</h2>
+
+      <div class="categoria">
+        <h3>Entradas:</h3>
+        <div class="item">
+          <span>Gyoza vegano:</span>
+        </div>
+        <div class="item">
+          <span>Edamame:</span> grãos de soja
+        </div>
+        <div class="item">
+          <span>Sunomono:</span> salada de pepino agridoce
+        </div>
+        <div class="item">
+          <span>Harumaki:</span> rolinho primavera com legumes e molho agridoce
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h3>Sushis:</h3>
+        <div class="item">
+          <span>Futomaki de legumes:</span>
+        </div>
+        <div class="item">
+          <span>Temaki de vegetais assados:</span>
+        </div>
+        <div class="item">
+          <span>Nigiri de abacate:</span>
+        </div>
+        <div class="item">
+          <span>Gunkan Maki de ovas vegetais:</span>
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h3>Quentes:</h3>
+        <div class="item">
+          <span>Yasai Yaki Udon:</span> macarrão udon com variedade de legumes em molho de soja e gengibre
+        </div>
+        <div class="item">
+          <span>Miso Shiru:</span> sopa de missô com caldo de legumes, pasta de missô e tofu macio
+        </div>
+        <div class="item">
+          <span>Yakisoba vegano:</span> macarrão yakisoba com legumes coloridos, broto de feijão e especiarias
+        </div>
+        <div class="item">
+          <span>Kinoko Gohan:</span> Arroz com cogumelos frescos
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h3>Sobremesas:</h3>
+        <div class="item">
+          <span>Sorvete de açúcar mascavo:</span> sorvete cremoso de açúcar mascavo, sem ingredientes de origem animal
+        </div>
+        <div class="item">
+          <span>Cheesecake de tofu:</span> cheesecake feito com tofu, sem ingredientes de origem animal
+        </div>
+        <div class="item">
+          <span>Pudim de chia com chá verde:</span> pudim de chia com chá verde matcha, sem ingredientes de origem
+          animal
+        </div>
+        <div class="item">
+          <span>Anmitsu vegano:</span> com frutas frescas, pedaços de batata doce e uma calda de açúcar de coco
+        </div>
+      </div>
+    </div>
+    <div class="cardapio">
+      <h2>Cardápio exótico</h2>
+
+      <div class="categoria">
+        <h3>Entradas:</h3>
+        <div class="item">
+          <span>Takoyaki:</span> bolinho de polvo com molho Tonkatsu
+        </div>
+        <div class="item">
+          <span>Ankimo:</span> fígado de tamboril no vapor com molho Ponzu
+        </div>
+        <div class="item">
+          <span>Shiokara:</span> pasta fermentada de frutos do mar com arroz
+        </div>
+        <div class="item">
+          <span>Ikura:</span> ovas de salmão frescas
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h3>Sushis:</h3>
+        <div class="item">
+          <span>Sushi de Baiacu (fugu):</span>
+        </div>
+        <div class="item">
+          <span>Sushi de ovas de ouriço-do-mar (uni):</span>
+        </div>
+        <div class="item">
+          <span>Sushi de polvo vivo (ika odori):</span>
+        </div>
+        <div class="item">
+          <span>Sushi de ovas de salmão (ikura):</span>
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h3>Quentes:</h3>
+        <div class="item">
+          <span>Sukiyaki:</span> fatias finas de carne, macarrão udon, tofu, vegetais, cogumelos e molhos
+        </div>
+        <div class="item">
+          <span>Yosenabe:</span> frutos do mar frescos com legumes, tofu, cogumelos e macarrão udon em caldo aromático
+        </div>
+        <div class="item">
+          <span>Chanko Nabe:</span> panela repleta de proteínas e legumes cozidos em caldo rico
+        </div>
+        <div class="item">
+          <span>Unagi Kabayaki:</span> enguia grelhada com molho teriyaki, arroz branco e legumes
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h3>Sobremesas:</h3>
+        <div class="item">
+          <span>Dorayaki:</span> panquecas recheadas com pasta de feijão azuki
+        </div>
+        <div class="item">
+          <span>Mochi:</span> bolinho de arroz glutinoso recheado com pasta doce
+        </div>
+        <div class="item">
+          <span>Taiyaki:</span> waffle com formato de peixe, recheado com pasta de feijão doce
+        </div>
+        <div class="item">
+          <span>Kakigori:</span> raspas de gelo com calda doce e coberturas variadas
+        </div>
+      </div>
+    </div>
+    <div class="cardapio">
+      <h2>Cardápio sem glúten</h2>
+
+      <div class="categoria">
+        <h3>Entradas:</h3>
+        <div class="item">
+          <span>Sopa de Missô sem glúten:</span> pasta de missô fermentado, tofu macio, cebolinha e algas
+        </div>
+        <div class="item">
+          <span>Ceviche de Saint Peter sem glúten:</span> filés de Saint Peter marinados em suco cítrico, cebola roxa,
+          coentro fresco e pimenta
+        </div>
+        <div class="item">
+          <span>Salada de Polvo sem glúten:</span> polvo cozido, azeite, limão, cebola roxa, tomate e cheiro verde
+        </div>
+        <div class="item">
+          <span>Salada de Kani sem glúten:</span> bastões de kani, alface, manga, pepino e molho especial
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h3>Sushis:</h3>
+        <div class="item">
+          <span>Niguiri de Salmão sem glúten:</span> fatias de salmão sobre arroz de sushi sem glúten
+        </div>
+        <div class="item">
+          <span>Uramaki Califórnia sem glúten:</span> rolo de sushi invertido com kani, pepino, manga e maionese sem
+          glúten, envolto em arroz e sementes de gergelim
+        </div>
+        <div class="item">
+          <span>Sushi de Atum sem glúten:</span> fatias de atum fresco sobre arroz de sushi sem glúten
+        </div>
+        <div class="item">
+          <span>Sushi Veggie sem glúten:</span> vegetais frescos sobre arroz de sushi sem glúten
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h3>Quentes:</h3>
+        <div class="item">
+          <span>Yakissoba sem glúten:</span> macarrão sem glúten com legumes e proteína
+        </div>
+        <div class="item">
+          <span>Frango Teriyaki sem glúten:</span> frango grelhado ao molho teriyaki, servido com arroz e legumes
+        </div>
+        <div class="item">
+          <span>Teppan de Legumes sem glúten:</span> legumes grelhados na manteiga com arroz japonês sem glúten
+        </div>
+        <div class="item">
+          <span>Tempurá sem glúten:</span> vegetais ou frutos do mar empanados sem glúten, fritos até ficarem crocantes
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h3>Sobremesas:</h3>
+        <div class="item">
+          <span>Daifukumochi sem glúten:</span> bolinho de arroz recheado com pasta doce, sem glúten
+        </div>
+        <div class="item">
+          <span>Sorvete de Matchá sem glúten:</span> sorvete de chá verde matchá, sem glúten
+        </div>
+        <div class="item">
+          <span>Panna Cotta sem glúten:</span> sobremesa italiana cremosa, sem glúten
+        </div>
+        <div class="item">
+          <span>Trufas de Chocolate sem glúten:</span> trufas de chocolate caseiras, sem glúten
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="creditos">
+    <div>
+      <p>Copyright © 2023 Genki Dama Sushi</p>
+    </div>
+  </footer>
+</body>
+
+</html>
